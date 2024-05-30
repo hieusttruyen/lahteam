@@ -9,8 +9,11 @@
 
 
 @section('content')
-
 <div id="menu">
+    <input type="checkbox" name="open" id="open">
+        <label for="open" class="open">
+            <i class="fas fa-bars"></i>
+        </label>
     <ul id ="none"></ul>
     <ul id="menu_tit">
         <li><a href="#mid">Trang chủ</a></li>
@@ -20,6 +23,7 @@
         <li><a href="#blog">Liên hệ</a></li>
     </ul>
 </div>
+
 
 <div id ="mid">
     <div id="intro">
@@ -34,13 +38,6 @@
             </li>
         </ul>
     </div>
-    <div id="imgMob">
-        <ul>
-            <li class="img8"><img src="./img/mobile/Rectangle m1.png"></li>
-            <li class="img9"><img src="./img/mobile/Rectangle m2.png"></li>
-        </ul>
-        <li class="img10"><img src="./img/mobile/Rectangle m3.png"></li>
-    </div>
     <div id="imgz">
         <ul>
             <li class="img1"><img src="./img/rectangle/Rectangle 39270.png"></li>
@@ -53,9 +50,20 @@
         </ul>
     </div>
 </div>
+<div id="imgM">
+    <div id="imgMob">
+        <ul>
+            <li class="img8"><img src="./img/mobile/Rectangle m1.png"></li>
+            <li class="img9"><img src="./img/mobile/Rectangle m2.png"></li>
+        </ul>
+        <ul>
+            <li class="img10"><img src="./img/mobile/Rectangle m3.png"></li>
+        </ul>
+    </div>
+</div>
 <div id="trust">
 
-        <h2>Trusted By</h2>
+    <h2>Trusted By</h2>
 
     <ul class="logo">
         <li><img src="./img/trusted/image 70.png"></li>
@@ -74,8 +82,6 @@
 </div>
 
 <div id="model">
-
-
     <ul class="modelText">
         <li class="modelText1">AI Models</li>
         <li class="modelText2">LaH Team là đội ngũ chuyên gia đầu ngành - những người có kinh nghiệm làm việc với Stable Diffusion nói riêng và AI tạo sinh hình ảnh nói chung, từ thời kỳ đầu AI tạo sinh có mặt trên thế giới.</li>
@@ -89,6 +95,7 @@
         <a href="https://civitai.com/models/118441/lah-mysterious-or-sdxl" target="_blank">
             <img class="mod1" src=".\img\model\Bot1\Bot1.png">
             <img class="ci1" src=".\img\model\top1.png">
+            <div class="overlay"></div>
             <li class="ai1">SDXL</li>
             <li class="ai2">Mysterious</li>
         </a>
@@ -182,7 +189,7 @@
         <ul class="big">
             <img src=".\img\about\image 76 (1).png">
             <ul>
-                <li class="nick">Đạt Trần</li>
+                <li class="nick">LaH</li>
                 <li class="name">Trần Đức Đạt</li>
                 <li class="job">Founder</li>
             </ul>
@@ -215,17 +222,21 @@
 </div>
 <div id="blog">
     <li class="blogTit">Liên hệ</li>
-    <img src=".\img\Vector 2.png">
+    <img class="blogCuv" src=".\img\Vector 2.png">
 
     <ul class="lh">
         <ul class="lh1">
             <li>Liên hệ với chúng tôi</li>
+            <div class="lhlah">Liên hệ LaH</div>
             <a href=https://mail.google.com/mail/ target="_blank">lah.team.ai@gmail.com</a>
+            <div class="imglh1">
+                <img src=".\img\connect\Facebook.png">
+                <img src=".\img\connect\LinkedIn.png">
+                <img src="img\connect\Call.png">
+            </div>
         </ul>
         <ul class="lh2">
-            <a href="https://www.facebook.com/lah.futureland/"target="_blank"><li>Facebook</li></a>
-            <li style="text-decoration: none">Website</li>
-            <li style="text-decoration: none">SĐT</li>
+            <img src=".\img\connect\IMG.png">
         </ul>
     </ul>
 </div>
@@ -254,6 +265,7 @@
         </svg>
 </button>
 </a>
+
 
 @stop
 
