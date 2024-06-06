@@ -23,7 +23,6 @@
     <!--Add this-->
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> --}}
 
-    <link rel="stylesheet" href="./css/home.css" /> <!--Add this-->
     <title>@yield('title', config('app.name', '@Master Layout'))</title>
 
     @yield('style-libraries')

@@ -14,7 +14,7 @@ dark blue:#1c3eff
 }
 
 body {
-  background: url(../img/background.png);
+  background: var(--BG, linear-gradient(180deg, #0B0013 0%, #350048 100%));
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,6 @@ body {
     background-position: center;
   }
 }
-
 #menu {
   position: fixed;
   top: 0;
@@ -37,7 +36,6 @@ body {
   transition: background-color 0.3s ease;
   /* Hiệu ứng chuyển đổi màu nền khi cuộn */
 }
-
 #menu ul {
   margin-top: 18px;
   display: flex;
@@ -91,6 +89,9 @@ body {
 #menu ul li a:hover {
   color: #eb9cff;
 }
+label{
+  display: none;
+}
 #open{
   display: none;
 } 
@@ -98,6 +99,9 @@ body {
 @media only screen and (max-width: 600px) {
   #menu #none{
     height: 0px;
+  }
+  label{
+    display: flex;
   }
   #menu ul{
     overflow: hidden;
@@ -190,6 +194,8 @@ body {
   line-height: 48px; /* 133.333% */
   letter-spacing: 0.72px;
 }
+
+
 #intro ul li button {
   display: flex;
   padding: 16px 36px;
@@ -208,9 +214,9 @@ body {
   background: linear-gradient(90deg, #66dbff 0%, #869eff 48.63%, #b73fff 100%);
   float: left;
   margin-right: 12px;
+  
 }
 #intro ul li .bt2 {
-  display: none;
   border-radius: 8px;
   border: 1px solid var(--Gradient-2, #66dbff);
 
@@ -569,12 +575,10 @@ body {
 #model .modelImg {
   margin-top: 40px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
 
   width: auto;
-
-  scrollbar-color: #66dbff rgba(62, 0, 142, 0.2);
-  scrollbar-width: thin;
+  height: 500px;
 }
 #model .modelImg a {
   position: relative;
@@ -661,12 +665,58 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
   line-height: 36px; /* 150% */
   letter-spacing: 0.24px;
 }
+#model .modelImg #btPre{
+  margin-top: 190px;
+  margin-left: 91px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  align-content: center;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 100px;
+  background:black;
 
+  backdrop-filter: blur(15px);
+}
+#model .modelImg #btPre svg{
+  color: white;
+  width: 17px;
+  height: 17px;
+}
+#model .modelImg #btNext{
+  margin-top: 190px;
+  margin-left: 93%;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  align-content: center;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 100px;
+  background:black;
+
+  backdrop-filter: blur(15px);
+}
+#model .modelImg #btNext svg{
+  color: white;
+  width: 17px;
+  height: 17px;
+}
 @media only screen and (max-width: 600px){
   #model{
     margin-top: 0px;
     padding: 36px;
-    background-color: red;
     height: 600px;
   }
   .modelText {
@@ -693,7 +743,8 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
     margin-left: -30px;
     margin-right: -30px;
     display: flex;
-    order: 2;
+    overflow-x: scroll;
+    height: auto;
   }
   #model .modelImg a{
     position: flex;
@@ -723,6 +774,10 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
     ),
     url(<path-to-image>) lightgray 50% / cover no-repeat;
   }
+  #model .modelImg a .ci1:hover {
+    
+    display: none;
+  }
   #model .modelImg a .ai1 {
     margin-top: -80px;
     margin-left: 12%;
@@ -750,6 +805,49 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.16px;
+  }
+  #model .modelImg #btPre{
+    margin-top: 130px;
+    margin-left: 36px;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background:black;
+  
+    backdrop-filter: blur(15px);
+  }
+  #model .modelImg #btPre svg{
+    color: white;
+    width: 16px;
+    height: 16px;
+  }
+  #model .modelImg #btNext{
+    margin-top: 130px;
+    margin-left: 84%;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background:black;
+  
+    backdrop-filter: blur(15px);
+  }
+  #model .modelImg #btNext svg{
+    color: white;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -979,14 +1077,18 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
     line-height: 24px; /* 150% */
   }
   #service .serBox {
-    margin-top: -65px;
-    margin-left: 13%;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    /* margin-top: -65px;*/
+    margin-left: 0px; 
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 171.429% */
-    display: flex;
     margin-bottom: 36px;
   }
   #service .serbox ul{
@@ -1124,6 +1226,7 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
   -webkit-text-fill-color: transparent;
 }
 #team .teamText .teamText2 {
+  list-style-type: none;
   width: 590px;
   color: rgba(255, 255, 255, 0.8);
 
@@ -1246,11 +1349,11 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
   #team .about {
     display: inline-table;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
   }
   #team .about .big {
-    margin-left: 17%;
-    width:  290px;
+    /* margin-left: 17%; */
+    width:  100%;
     margin-top: 16px;
     display: flex;
     padding: 12px 12px 12px 12px;
@@ -1262,6 +1365,7 @@ box-shadow: 0px 0px 54px 0px rgba(201, 147, 255, 0.32);
     justify-items: center;
   }
   #team .about .big img{
+    margin-left: 17%;
     object-fit: cover;
     height: 90px;
     margin-right: 10px;
@@ -1466,7 +1570,9 @@ background: rgba(255, 255, 255, 0.04);
     letter-spacing: 0.48px;
   }
   #blog .blogCuv{
-    display: none;
+    width: 66.047px;
+    height: 4.728px;
+    flex-shrink: 0;
   }
   #blog .lh2{
     display: none;
