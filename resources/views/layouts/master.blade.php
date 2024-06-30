@@ -30,7 +30,7 @@
     @yield('styles')
 </head>
 
-<body>
+<body id="body">
     @include('partial.header')
 
     @yield('content')

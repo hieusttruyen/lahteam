@@ -1,3 +1,4 @@
+//horizontal scroll button model
 const horibar= document.getElementById("modelImg");
 
 const scrollLeftButton = document.getElementById("btPre");
@@ -20,7 +21,7 @@ const scrollRightButton = document.getElementById("btNext");
         });
       });
 
-      
+//typing text      
 const hightlight = document.getElementById("texth5");
 var i=0;
 var txt="Đội ngũ chuyên gia hàng đầu Việt Nam về AI tạo sinh";
@@ -36,5 +37,19 @@ function typing(){
 typing();
 
 
+ 
+
+//scroll menu thu gon
+window.onscroll = function() {hideMenu();};
+
+function hideMenu() {
+  var x;
+  x = document.getElementById('none');
+  if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      x.style.display='none';
+  }else{
+      x.style.display='flex';
+  }    
+}
 
 

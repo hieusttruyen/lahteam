@@ -10,6 +10,7 @@
 
 @section('content')
 
+
     <div id="menu">
         <input type="checkbox" name="open" id="open">
         <label for="open" class="open">
@@ -17,28 +18,28 @@
         </label>
         <ul id ="none"></ul>
         <ul id="menu_tit">
-            <li><a href="#mid">Trang chủ</a></li>
+            <li><a href="#home">Trang chủ</a></li>
             <li><a href="#model">Dự án</a></li>
-            <li><a href="#service">Dịch vụ</a></li>
+            <li><a href="#dichvu">Dịch vụ</a></li>
             <li><a href="#team">Giới thiệu</a></li>
-            <li><a href="#blog">Liên hệ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
         </ul>
     </div>
 
 
     <div id ="mid">
+        <ul id="home"></ul>
         <div id="intro">
             <ul>
                 <li class="intro1">
                     <h3>LaH Team</h3>
-                    {{-- <h5 id="texth5">Đội ngũ chuyên gia hàng đầu Việt Nam về AI tạo sinh</h5> --}}
                     <h5 id="texth5"></h5>
-                    <div class="bt">
-                        <a href="http://m.me/117688878006404" target="_blank"><button class="bt1" type="button"
-                                href="m.me/117688878006404">Kết nối ngay</button></a>
+                    <ul class="bt">
+                        <a href="http://m.me/117688878006404" target="_blank"><button class="bt1" type="button">Kết nối
+                                ngay</button></a>
                         <a href="" style="text-decoration: none"><button class="bt2" type="button">Đăng kí tư
                                 vấn</button></a>
-                    </div>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -99,11 +100,13 @@
         </ul>
         <ul class="modelImg" id="modelImg">
             <a href="https://civitai.com/models/118441/lah-mysterious-or-sdxl" target="_blank">
-                <img class="mod1" src=".\img\model\Bot1\Bot1.png">
-                <img class="ci1" src=".\img\model\top1.png">
-                <div class="overlay"></div>
-                <li class="ai1">SDXL</li>
-                <li class="ai2">Mysterious</li>
+                <div class="overlay">
+                    <img class="mod1" src=".\img\model\Bot1\Bot1.png">
+                    <img class="ci1" src=".\img\model\top1.png">
+
+                    <li class="ai1">SDXL</li>
+                    <li class="ai2">Mysterious</li>
+                </div>
             </a>
             <a href="https://civitai.com/models/125036/lah-t-shirt-design-concept" target="_blank">
                 <img class="mod1" src=".\img\model\Bot1\Bot2.png">
@@ -170,6 +173,7 @@
                 </svg>
             </button>
         </ul>
+        <ul id="dichvu"></ul>
     </div>
 
     <div id="service">
@@ -243,6 +247,7 @@
                 </ul>
             </ul>
         </ul>
+        <ul id="contact"></ul>
     </div>
     <div id="blog">
         <li class="blogTit">Liên hệ</li>
@@ -252,7 +257,7 @@
             <ul class="lh1">
                 <li>Liên hệ với chúng tôi</li>
                 <div class="lhlah">Liên hệ LaH</div>
-                <a href=https://mail.google.com/mail/ target="_blank">
+                <a class="lhMail" href=https://mail.google.com/mail/ target="_blank">
                     lah.team.ai@gmail.com
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
@@ -269,9 +274,11 @@
                     </svg>
                 </a>
                 <div class="imglh1">
-                    <img src=".\img\connect\Facebook.png">
-                    <img src=".\img\connect\LinkedIn.png">
-                    <img src="img\connect\Call.png">
+                    <a target='_blank' href="https://www.facebook.com/lah.futureland">
+                        <img src=".\img\connect\Facebook.png">
+                        <img src=".\img\connect\LinkedIn.png">
+                        <img src="img\connect\Call.png">
+                    </a>
                 </div>
             </ul>
             <ul class="lh2">
@@ -294,7 +301,7 @@
                 <li>Twitter</li>
                 <li>Linkedin</li>
             </ul>
-            <a href="#menu"><img src=".\img\arrow-top.svg.png"></a>
+            <a href="#home"><img src=".\img\arrow-top.svg.png"></a>
         </ul>
     </div>
     <a href="http://m.me/117688878006404" target="_blank">

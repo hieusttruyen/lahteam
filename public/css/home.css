@@ -28,7 +28,6 @@ body {
 #menu {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   /* Đảm bảo menu hiển thị trên tất cả các phần khác */
@@ -37,8 +36,12 @@ body {
   /* Hiệu ứng chuyển đổi màu nền khi cuộn */
 }
 #menu ul {
+  /* width: 800px; */
   margin-top: 18px;
+  margin-left: 25%;
+  margin-right: 25%;
   display: flex;
+  justify-self: center;
   align-items: center;
   justify-content: center;
   padding: 8px;
@@ -144,17 +147,17 @@ label{
 } */
 }
 #mid{
-  margin-top: 180px;
   display: flex;
   justify-content: center;
   justify-items: center;
 }
 #mid div {
+  margin-top: 140px;
   list-style-type: none;
   /* margin-left: 6%; */
 }
 #mid .intro1{
-  margin-left: -10%;
+  margin-left: -4%;
 }
 
 #intro ul .intro1 {
@@ -230,9 +233,10 @@ label{
 @media only screen and (max-width: 600px) {
   #mid{
     margin-top: 120px;
-    height: 230px;
+    height: 250px;
   }
   #mid div{
+    margin-top: 0px;
     margin-left: 0%;
   }
   #intro{
@@ -251,7 +255,7 @@ label{
   #intro ul .intro1 h3{
     margin-top: 0px;
     font-family: Mulish;
-    font-size: 24px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -268,6 +272,7 @@ label{
     list-style-type: none;
   }
   #intro ul .intro1 h5{
+    width: 320px;
     color: var(--White, var(--White, #FFF));
     text-align: center;
     /* Body/body Small */
@@ -1510,7 +1515,7 @@ background: rgba(255, 255, 255, 0.04);
   line-height: normal;
   letter-spacing: 0.64px;
 }
-#blog .lh .lh1 a {
+#blog .lh .lh1 .lhMail {
   margin-top: 36px;
   margin-bottom: 63px;
   text-decoration: none;
@@ -1530,7 +1535,7 @@ background: rgba(255, 255, 255, 0.04);
   line-height: 28px; /* 116.667% */
   letter-spacing: 0.24px;
 }
-#blog .lh .lh1 .imglh1{
+#blog .lh .lh1 .imglh1 a{
   display: flex;
   flex-direction: row;
   margin-bottom: 44px;
